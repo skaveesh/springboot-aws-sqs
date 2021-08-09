@@ -31,7 +31,7 @@ public class AwsSQSConfig {
     @Primary
     @Bean
     public AmazonSQSAsync amazonSQSAsync() {
-        return AmazonSQSAsyncClientBuilder.standard().withRegion(Regions.AP_SOUTH_1)
+        return AmazonSQSAsyncClientBuilder.standard().withRegion(Regions.US_EAST_1)
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(awsAccessKey, awsSecretKey)))
                 .build();
     }
